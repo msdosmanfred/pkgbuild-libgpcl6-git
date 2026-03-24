@@ -42,4 +42,6 @@ build() {
 package() {
   cd $srcdir/$pkgname
   make DESTDIR="$pkgdir/" install-so-gpcl6
+  rm -f usr/include/ghostscript/gdevdsp.h
+  rm -f usr/include/ghostscript/gserrors.h
 }
