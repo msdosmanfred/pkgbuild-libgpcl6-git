@@ -31,7 +31,7 @@ pkgver() {
 
 prepare() {
   cd $srcdir/$pkgname
-  ./autogen.sh --prefix=/usr
+  ./autogen.sh --prefix=/usr --without-xps
 }
 
 build() {
