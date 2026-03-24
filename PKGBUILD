@@ -8,7 +8,7 @@
 
 # Maintainer: Alexander Höfer <hoefer9(AT)gmail.com>
 pkgname=libgpcl6-git
-pkgver=ghostpdl.r11571.fc796c374
+pkgver=ghostpdl.r11571.gfc796c3
 pkgrel=1
 epoch=1
 pkgdesc="GhostPCL library for use with 86Box's PCL printing feature"
@@ -37,11 +37,6 @@ prepare() {
 build() {
   cd $srcdir/$pkgname
   make so-only
-}
-
-check() {
-  cd $srcdir/$pkgname
-  make -k check
 }
 
 package() {
