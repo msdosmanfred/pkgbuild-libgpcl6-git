@@ -10,6 +10,7 @@
 pkgname=libgpcl6-git
 pkgver=ghostpdl.r11571.fc796c374
 pkgrel=1
+epoch=1
 pkgdesc="GhostPCL library for use with 86Box's PCL printing feature"
 arch=('x86_64')
 url="https://www.ghostscript.com/"
@@ -24,26 +25,26 @@ sha256sums=('SKIP')
 # a description of each element in the source array.
 
 pkgver() {
-	cd $srcdir/$pkgname
-	git describe --long --abbrev=7 | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+  cd $srcdir/$pkgname
+  git describe --long --abbrev=7 | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 prepare() {
-	cd $srcdir/$pkgname
-	./autogen.sh --prefix=/usr
+  cd $srcdir/$pkgname
+  ./autogen.sh --prefix=/usr
 }
 
 build() {
-	cd $srcdir/$pkgname
-	make so-only
+  cd $srcdir/$pkgname
+  make so-only
 }
 
 check() {
-	cd $srcdir/$pkgname
-	make -k check
+  cd $srcdir/$pkgname
+  make -k check
 }
 
 package() {
-	cd $srcdir/$pkgname
-	make DESTDIR="$pkgdir/" install-so-gpcl6
+  cd $srcdir/$pkgname
+  make DESTDIR="$pkgdir/" install-so-gpcl6
 }
