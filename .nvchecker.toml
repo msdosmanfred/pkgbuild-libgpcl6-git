@@ -1,0 +1,4 @@
+[libgpcl6-git]
+source = "git"
+git = "https://github.com/ArtifexSoftware/ghostpdl.git"
+use_commit = "yes"
