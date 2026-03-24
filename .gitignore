@@ -1,2 +1,4 @@
 *.zst
 */
+*.log
+libgpcl6*
