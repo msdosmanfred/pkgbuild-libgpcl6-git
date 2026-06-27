@@ -1,14 +1,6 @@
-# This is an example PKGBUILD file. Use this as a start to creating your own,
-# and remove these comments. For more information, see 'man PKGBUILD'.
-# NOTE: Please fill out the license field for your package! If it is unknown,
-# then please put 'unknown'.
-
-# Guidelines specific to Bazaar, Git, Mercurial and Subversion packages.
-# Other VCS sources are not natively supported by makepkg yet.
-
 # Maintainer: Alexander Höfer <hoefer9(AT)gmail.com>
 pkgname=libgpcl6-git
-pkgver=ghostpdl.r11571.gfc796c3
+pkgver=ghostpdl.r11732.gacb40bf
 pkgrel=1
 epoch=1
 pkgdesc="GhostPCL library for use with 86Box's PCL printing feature"
@@ -20,9 +12,6 @@ makedepends=('git' 'base-devel') # 'bzr', 'git', 'mercurial' or 'subversion'
 provides=("libgpcl6")
 source=("${pkgname}::git+https://github.com/ArtifexSoftware/ghostpdl.git")
 sha256sums=('SKIP')
-
-# Please refer to the 'USING VCS SOURCES' section of the PKGBUILD man page for
-# a description of each element in the source array.
 
 pkgver() {
   cd $srcdir/$pkgname
